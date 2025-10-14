@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}WTgroup - Bolsas e Oportunidades Globais{% endblock %}
+
+{% block extra_head %}
+<style>
+ <section class="hero text-center text-white d-flex flex-column justify-content-center align-items-center">
+  <div class="hero-slideshow"></div>
+  <div class="container fade-in">
+    <h1 class="display-4 fw-bold mb-3">Conectando Estudantes a Universidades no Mundo Todo</h1>
+    <p class="lead mb-4">
+      A WTgroup oferece acesso a bolsas internacionais, cursos de excelência e parcerias acadêmicas únicas.
+    </p>
+    <div class="d-flex gap-3 justify-content-center">
+      <a href="/universidades/" class="btn btn-brand btn-lg px-4">Ver Universidades</a>
+      <a href="/cursos/" class="btn btn-outline-light btn-lg px-4">Explorar Cursos</a>
+    </div>
+  </div>
+</section>
+
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-overlay">
+    <div class="hero-content">
+      <h1>Conectando Estudantes a Universidades no Mundo Todo</h1>
+      <p>A WTgroup oferece acesso a bolsas internacionais, cursos de excelência e parcerias acadêmicas únicas.</p>
+      <div class="hero-buttons">
+        <a href="{% url 'universidades' %}" class="btn-primary">Ver Universidades</a>
+        <a href="{% url 'cursos' %}" class="btn-secondary">Explorar Cursos</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSÃO / VISÃO / VALORES -->
+<section class="section text-center">
+  <div class="container">
+    <h2 class="fw-bold text-white mb-5 fade-in">Nossa Essência</h2>
+
+    <div class="row g-4">
+      <div class="col-md-4 fade-in">
+        <div class="bg-panel p-4 h-100">
+          <div class="text-center mb-3"><i class="bi bi-rocket-takeoff fs-1 text-success"></i></div>
+          <h5 class="fw-bold text-white">Missão</h5>
+          <p class="text-muted-2 mt-2">
+            Inspirar e apoiar jovens africanos e internacionais a alcançarem educação de qualidade,
+            conectando-os com universidades de prestígio global.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4 fade-in">
+        <div class="bg-panel p-4 h-100">
+          <div class="text-center mb-3"><i class="bi bi-eye fs-1 text-info"></i></div>
+          <h5 class="fw-bold text-white">Visão</h5>
+          <p class="text-muted-2 mt-2">
+            Ser o elo de referência entre estudantes e instituições internacionais, promovendo inclusão,
+            mérito e oportunidades educacionais em todo o mundo.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4 fade-in">
+        <div class="bg-panel p-4 h-100">
+          <div class="text-center mb-3"><i class="bi bi-heart-pulse fs-1 text-danger"></i></div>
+          <h5 class="fw-bold text-white">Valores</h5>
+          <p class="text-muted-2 mt-2">
+            Excelência, compromisso, ética e inovação — pilares que guiam todas as nossas ações e parcerias
+            globais no campo educacional.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHAMADA FINAL -->
+<section class="section text-center">
+  <div class="container fade-in">
+    <h2 class="fw-bold text-white mb-4">Pronto para Começar a Tua Jornada Internacional?</h2>
+    <p class="text-muted-2 mb-4">
+      Descobre universidades de topo e cursos adaptados ao teu perfil acadêmico e profissional.
+    </p>
+    <a href="/contato/" class="btn btn-brand btn-lg px-5">Falar com um Consultor</a>
+  </div>
+</section>
+
+{% endblock %}

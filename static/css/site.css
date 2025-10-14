@@ -1,0 +1,180 @@
+/* ========== Reset pequeno e fonte ========== */
+:root{
+  --brand:#0a2540;      /* azul-escuro corporativo */
+  --brand-2:#0f3460;    /* variação */
+  --accent:#00d084;     /* destaque (botões/links) */
+  --light:#f5f7fb;
+  --muted:#9fb0c0;
+}
+html,body{height:100%}
+body{
+  background:#0b1220;
+  color:#e9eef6;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+/* ========== Transição de página (fade) ========== */
+.page-enter{
+  opacity:0; transform: translateY(8px);
+}
+.page-enter-active{
+  opacity:1; transform: translateY(0); transition: opacity .5s ease, transform .5s ease;
+}
+
+/* ========== Navbar fixa com blur/transparência ========== */
+.navbar-glass{
+  position: sticky; top:0; z-index:1020;
+  background: rgba(10, 18, 32, .6);
+  backdrop-filter: saturate(140%) blur(14px);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.navbar-glass .nav-link{
+  color:#dfe9f5 !important; font-weight:600;
+}
+.navbar-glass .nav-link.active, .navbar-glass .nav-link:hover{
+  color:#00d084 !important;
+}
+
+/* ========== Hero com parallax opcional ========== */
+.hero{
+  min-height: 58vh;
+  display:flex; align-items:center; justify-content:center;
+  text-align:center;
+  background: linear-gradient( to bottom, rgba(10,37,64,.65), rgba(10,37,64,.85) ),
+              var(--hero-image, url('/static/img/universidade-hero.jpg')) center/cover fixed no-repeat;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.hero h1{ font-size: clamp(2rem, 3.2vw, 3.2rem); font-weight:800; letter-spacing:.2px}
+.hero p{ color:#cfe1f1; max-width:800px; margin:12px auto 0 }
+
+/* ========== Cards com fade-in ao entrar na viewport ========== */
+.fade-in{ opacity:0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease}
+.fade-in.is-visible{ opacity:1; transform: translateY(0)}
+
+/* ========== Botões primários ========== */
+.btn-brand{
+  background:linear-gradient(135deg, var(--accent), #27e1a1);
+  color:#07221a; font-weight:700; border:0;
+}
+.btn-brand:hover{ filter: brightness(1.05) }
+
+/* ========== Rodapé ========== */
+.footer{
+  background: linear-gradient(180deg, rgba(9,14,24,1) 0%, rgba(7,11,20,1) 100%);
+  border-top: 1px solid rgba(255,255,255,.06);
+  color:#bcd0e0;
+}
+.footer a{ color:#bcd0e0; text-decoration:none }
+.footer a:hover{ color:#00d084 }
+
+/* ========== Botão flutuante WhatsApp ========== */
+.whatsapp-float{
+  position:fixed; right:18px; bottom:18px; z-index:1030;
+  width:56px; height:56px; border-radius:50%;
+  display:grid; place-items:center;
+  background:#25D366; color:white; box-shadow: 0 8px 26px rgba(0,0,0,.25);
+}
+.whatsapp-float:hover{ filter:brightness(1.05) }
+
+/* ========== Seções padrão ========== */
+.section{
+  padding: 64px 0;
+  background:
+    radial-gradient(1200px 500px at -10% -30%, rgba(0,255,200,.08), transparent 60%),
+    radial-gradient(800px 400px at 110% 20%, rgba(0,180,255,.06), transparent 55%);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+/* ========== Helpers ========== */
+.text-muted-2{ color:#9bb1c6 }
+.bg-panel{ background: rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.06); border-radius:14px }
+
+/* ===== HERO SECTION COM SLIDESHOW ===== */
+.hero {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: slideshow 15s infinite ease-in-out;
+}
+
+@keyframes slideshow {
+  0%, 33% {
+    background-image: url("/static/images/hero1.jpg");
+  }
+  34%, 66% {
+    background-image: url("/static/images/hero2.jpg");
+  }
+  67%, 100% {
+    background-image: url("/static/images/hero3.jpg");
+  }
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  color: #fff;
+  text-align: center;
+  z-index: 2;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero-content p {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  color: #d9d9d9;
+}
+
+.hero-buttons {
+  margin-top: 2rem;
+}
+
+.btn-primary {
+  background-color: #00d1a0;
+  padding: 0.8rem 1.8rem;
+  border-radius: 5px;
+  color: #000;
+  font-weight: 600;
+  margin-right: 1rem;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #00b386;
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  border: 2px solid #fff;
+  padding: 0.8rem 1.8rem;
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

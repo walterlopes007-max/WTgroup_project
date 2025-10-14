@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}Universidades - WTgroup{% endblock %}
+
+{% block content %}
+<!-- HERO + BACKGROUND -->
+<section class="text-light text-center py-5"
+         style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; min-height: 300px;">
+  <div class="container py-5">
+    <h1 class="fw-bold text-info mb-3 animate__animated animate__fadeInDown">
+      Universidades Parceiras 🌍
+    </h1>
+    <p class="lead animate__animated animate__fadeInUp">
+      Explore nossas universidades parceiras — instituições de excelência reconhecidas mundialmente.
+    </p>
+  </div>
+</section>
+
+<!-- UNIVERSIDADES LIST -->
+<section class="py-5" 
+         style="background: linear-gradient(rgba(10,10,20,0.85), rgba(10,10,20,0.9)), url('https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=1600&q=80') center/cover fixed no-repeat;">
+  <div class="container">
+    <div class="row g-4">
+      {% for universidade in universidades %}
+      <div class="col-md-4">
+        <div class="card border-0 shadow-lg h-100 bg-dark text-light rounded-4" style="background-color: rgba(15, 20, 30, 0.9);">
+          <img src="https://source.unsplash.com/600x400/?university,{{ universidade.nome|urlencode }}" 
+               class="card-img-top rounded-top" alt="{{ universidade.nome }}">
+          <div class="card-body">
+            <h5 class="fw-bold text-info">{{ universidade.nome }}</h5>
+            <p class="small text-muted">{{ universidade.pais }}</p>
+            <p>{{ universidade.descricao|truncatechars:120 }}</p>
+            <a href="{{ universidade.site }}" target="_blank" class="btn btn-outline-info btn-sm mt-2">
+              🌐 Visitar Site
+            </a>
+          </div>
+        </div>
+      </div>
+      {% empty %}
+      <p class="text-center text-muted">Nenhuma universidade cadastrada.</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<footer class="bg-dark text-center text-light py-3 mt-5">
+  <p>© 2025 WTgroup | Desenvolvido por Walter Lopes</p>
+</footer>
+{% endblock %}

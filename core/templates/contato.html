@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Contato{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+  <h1>Fale Conosco</h1>
+
+  {% if sucesso %}
+    <div class="alert alert-success">
+      Sua mensagem foi enviada com sucesso! Entraremos em contato em breve.
+    </div>
+  {% endif %}
+
+  <form method="POST">
+    {% csrf_token %}
+    <div class="mb-3">
+      {{ form.as_p }}
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+
+  <hr>
+  <p><strong>WhatsApp:</strong> +86 184 4322 7231</p>
+  <p><strong>Email:</strong> teuemail@gmail.com</p>
+</div>
+{% endblock %}

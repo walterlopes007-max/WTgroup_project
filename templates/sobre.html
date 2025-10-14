@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}Sobre - WTgroup{% endblock %}
+
+{% block content %}
+<!-- SEÇÃO DE CAPA -->
+<section class="text-light text-center d-flex align-items-center justify-content-center"
+         style="background: linear-gradient(rgba(0, 20, 40, 0.6), rgba(0, 20, 40, 0.8)), url('/static/images/walter_graduacao.jpg') center/cover no-repeat; min-height: 80vh;">
+  <div class="container">
+    <h1 class="fw-bold text-info mb-3 animate__animated animate__fadeInDown">Sobre a WTgroup 🌍</h1>
+    <p class="lead animate__animated animate__fadeInUp">
+      Conectando sonhos à educação global — inspirada por histórias reais de superação e conquista.
+    </p>
+  </div>
+</section>
+
+<!-- SEÇÃO DE CONTEÚDO -->
+<section class="container py-5">
+  <div class="row align-items-center">
+    <div class="col-md-6 mb-4">
+      <img src="/static/images/walter_graduacao.jpg" class="img-fluid rounded shadow-lg" alt="Walter Lopes e família na graduação">
+    </div>
+    <div class="col-md-6 text-light">
+      <h3 class="text-info fw-bold">Quem Somos</h3>
+      <p>
+        A <strong>WTgroup</strong> nasceu de uma história real de superação e educação. Criada por
+        <strong>Walter Lopes</strong>, estudante africano em Jiangsu University of Science and Technology (China),
+        a plataforma tem como missão conectar estudantes africanos às melhores universidades do mundo.
+      </p>
+      <p>
+        A foto que você vê representa mais do que uma formatura — é a concretização de um sonho compartilhado entre
+        mãe, filho e irmã. Essa jornada inspirou o WTgroup a ajudar outros jovens a conquistarem o mesmo.
+      </p>
+
+      <h4 class="text-info mt-3 fw-bold">Missão</h4>
+      <p>Promover o acesso à educação internacional e formar líderes globais comprometidos com o futuro.</p>
+
+      <h4 class="text-info mt-3 fw-bold">Visão</h4>
+      <p>Ser a ponte entre África e o mundo através da educação, tecnologia e inovação.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-dark text-center text-light py-3">
+  <p>© 2025 WTgroup | Desenvolvido por Walter Lopes</p>
+</footer>
+{% endblock %}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Cursos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background: #f9f9f9;
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            background: #fff;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        small {
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Cursos</h1>
+    <ul>
+        {% for curso in cursos %}
+            <li>
+                <strong>{{ curso.nome }}</strong> <br>
+                <small>{{ curso.descricao }}</small> <br>
+                Duração: {{ curso.duracao }} <br>
+                Universidade: {{ curso.universidade.nome }}
+            </li>
+        {% empty %}
+            <li>Nenhum curso cadastrado.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}Contato - WTgroup{% endblock %}
+
+{% block content %}
+<section class="text-light text-center py-5 parallax"
+         style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), 
+         url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;">
+  <div class="container py-5">
+    <h1 class="fw-bold text-info mb-3 animate__animated animate__fadeInDown">Entre em Contato</h1>
+    <p class="lead animate__animated animate__fadeInUp">Nossa equipe está pronta para ajudar você a realizar seus sonhos acadêmicos.</p>
+  </div>
+</section>
+
+<section class="py-5" style="background-color: rgba(10,15,25,0.95);">
+  <div class="container">
+    <div class="row justify-content-center g-4">
+      
+      <!-- Contato 1 - Walter -->
+      <div class="col-md-5 fade-in">
+        <div class="card bg-dark text-light border-0 shadow-lg h-100 rounded-4 p-4">
+          <div class="text-center mb-3">
+            <i class="bi bi-person-circle text-info" style="font-size: 3rem;"></i>
+          </div>
+          <h4 class="text-info text-center fw-bold mb-2">Walter Lopes</h4>
+          <p class="text-center text-secondary mb-4">Fundador e Coordenador</p>
+          <p><i class="bi bi-envelope-at text-info"></i> <a href="mailto:walterlopes007@gmail.com" class="text-light">walterlopes007@gmail.com</a></p>
+          <p><i class="bi bi-whatsapp text-success"></i> <a href="https://wa.me/8618443227231" target="_blank" class="text-success">+86 184 4322 7231</a></p>
+        </div>
+      </div>
+
+      <!-- Contato 2 - Tério Zacarias -->
+      <div class="col-md-5 fade-in">
+        <div class="card bg-dark text-light border-0 shadow-lg h-100 rounded-4 p-4">
+          <div class="text-center mb-3">
+            <i class="bi bi-person-badge text-warning" style="font-size: 3rem;"></i>
+          </div>
+          <h4 class="text-warning text-center fw-bold mb-2">Tério Zacarias</h4>
+          <p class="text-center text-secondary mb-4">Gestor de Relacionamento</p>
+          <p><i class="bi bi-envelope-at text-info"></i> <a href="mailto:teriozacarias@gmail.com" class="text-light">teriozacarias@gmail.com</a></p>
+          <p><i class="bi bi-whatsapp text-success"></i> <a href="https://wa.me/244943690536" target="_blank" class="text-success">+244 943 690 536</a></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="bg-dark text-center text-light py-3">
+  <p>© 2025 WTgroup | Desenvolvido por Walter Lopes e Tério Zacarias</p>
+</footer>
+{% endblock %}
