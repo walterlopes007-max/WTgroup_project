@@ -27,8 +27,9 @@ SECRET_KEY = 'django-insecure-15zo(ll7drsiu%j1gaqja$ae#y6)7d9da-hxf3bs1&nitq!(*(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['wtgroup-academy.onrender.com', '127.0.0.1', 'localhost']
 
+CSRF_TRUSTED_ORIGINS = ['https://wtgroup-academy.onrender.com']
 
 # Application definition
 
