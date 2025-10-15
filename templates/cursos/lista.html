@@ -1,59 +1,32 @@
 {% extends 'base.html' %}
 
-{% block title %}Cursos - WTgroup{% endblock %}
-
 {% block content %}
-<!-- HERO SECTION -->
-<section class="text-light text-center py-5"
-         style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; min-height: 300px;">
-  <div class="container py-5">
-    <h1 class="fw-bold text-info mb-3 animate__animated animate__fadeInDown">
-      Cursos Disponíveis 🎓
-    </h1>
-    <p class="lead animate__animated animate__fadeInUp">
-      Encontre o curso ideal para sua formação acadêmica e profissional.
-    </p>
-  </div>
-</section>
-
-<!-- LISTA DE CURSOS -->
-<section class="py-5" 
-         style="background: linear-gradient(rgba(10,10,20,0.9), rgba(10,10,20,0.9)), url('https://images.unsplash.com/photo-1522205408450-add114ad53fe?auto=format&fit=crop&w=1600&q=80') center/cover fixed no-repeat;">
+<section class="section">
   <div class="container">
-    <div class="row g-4">
-      {% for curso in cursos %}
-      <div class="col-md-4">
-        <div class="card border-0 shadow-lg h-100 bg-dark text-light rounded-4 animate__animated animate__fadeInUp" 
-             style="background-color: rgba(20, 25, 35, 0.95); transition: transform 0.3s;">
-          <div class="card-img-top rounded-top" 
-               style="background: url('https://source.unsplash.com/600x400/?university,{{ curso.nome|urlencode }}') center/cover; height: 200px;">
-          </div>
-          <div class="card-body">
-            <h5 class="fw-bold text-info">{{ curso.nome }}</h5>
-            <p class="small text-muted mb-1">
-              <strong>Universidade:</strong> {{ curso.universidade.nome }}
-            </p>
-            <p class="small text-muted mb-1">
-              <strong>Duração:</strong> {{ curso.duracao }}
-            </p>
-            <p class="small text-muted mb-3">
-              <strong>Grau:</strong> {{ curso.get_grau_display }}
-            </p>
-            <p>{{ curso.descricao|truncatechars:120 }}</p>
-            <a href="{% url 'curso_detalhe' curso.id %}" class="btn btn-outline-info btn-sm mt-2">
-              📘 Ver Descrição Completa
-            </a>
-          </div>
+    <h1 class="text-center fw-bold mb-5">📚 Lista de Cursos Disponíveis</h1>
+
+    {% regroup cursos by universidade as universidades_list %}
+
+    {% for grupo in universidades_list %}
+      <div class="card mb-5 shadow">
+        <div class="card-header bg-primary text-white">
+          <h3 class="mb-0">{{ grupo.grouper.nome }}</h3>
+        </div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            {% for curso in grupo.list %}
+              <li class="list-group-item">
+                <h5 class="fw-bold text-dark">{{ curso.nome }}</h5>
+                <p class="mb-1">{{ curso.descricao }}</p>
+                <span class="badge bg-secondary">Duração: {{ curso.duracao }}</span>
+              </li>
+            {% endfor %}
+          </ul>
         </div>
       </div>
-      {% empty %}
-      <p class="text-center text-muted">Nenhum curso cadastrado no momento.</p>
-      {% endfor %}
-    </div>
+    {% empty %}
+      <p class="text-center">Nenhum curso encontrado no momento.</p>
+    {% endfor %}
   </div>
 </section>
-
-<footer class="bg-dark text-center text-light py-3 mt-5">
-  <p>© 2025 WTgroup | Desenvolvido por Walter Lopes</p>
-</footer>
 {% endblock %}

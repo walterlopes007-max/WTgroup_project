@@ -1,19 +1,12 @@
 {% extends 'base.html' %}
-
-{% block title %}{{ curso.nome }} - WTgroup{% endblock %}
-
 {% block content %}
-<section class="py-5 text-light" style="background-color: #0d1117;">
-  <div class="container">
-    <h1 class="fw-bold text-info">{{ curso.nome }}</h1>
-    <p class="text-muted mb-3">
-      <strong>Universidade:</strong> {{ curso.universidade.nome }} <br>
-      <strong>Duração:</strong> {{ curso.duracao }} <br>
-      <strong>Grau:</strong> {{ curso.get_grau_display }}
-    </p>
-    <p class="lead">{{ curso.descricao }}</p>
-    <a href="{% url 'cursos' %}" class="btn btn-outline-info mt-4">← Voltar aos Cursos</a>
-  </div>
-</section>
+<div class="container py-5">
+  <h1 class="fw-bold text-primary">{{ curso.nome }}</h1>
+  <p class="text-muted">{{ curso.descricao }}</p>
+  <p><strong>Duração:</strong> {{ curso.duracao }}</p>
+  <p><strong>Universidade:</strong> {{ curso.universidade.nome }}</p>
+
+  <a href="{% url 'cursos' %}" class="btn btn-outline-primary mt-3">⬅ Voltar à lista</a>
+</div>
 {% endblock %}
 

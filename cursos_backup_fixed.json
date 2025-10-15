@@ -1,0 +1,464 @@
+﻿[
+{
+  "model": "cursos.curso",
+  "pk": 1,
+  "fields": {
+    "nome": "Engenharia Informßtica",
+    "descricao": "Curso voltado Ó inovaþÒo tecnol¾gica e desenvolvimento de software",
+    "duracao": "4 anos",
+    "grau": "",
+    "universidade": 1
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 2,
+  "fields": {
+    "nome": "AdministraþÒo",
+    "descricao": "Curso voltado Ó gestÒo de empresas, planejamento estratÚgico e finanþas.",
+    "duracao": "4 anos",
+    "grau": "",
+    "universidade": 1
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 3,
+  "fields": {
+    "nome": "GestÒo Empresarial",
+    "descricao": "Curso focado em lideranþa, estratÚgia e administraþÒo moderna.",
+    "duracao": "3 anos",
+    "grau": "",
+    "universidade": 1
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 4,
+  "fields": {
+    "nome": "Engenharia Informßtica",
+    "descricao": "Curso voltado Ó inovaþÒo tecnol¾gica e desenvolvimento de software.",
+    "duracao": "4 anos",
+    "grau": "",
+    "universidade": 1
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 5,
+  "fields": {
+    "nome": "Engenharia MecÔnica",
+    "descricao": "Curso centrado em sistemas mecÔnicos, design industrial e inovaþÒo tecnol¾gica.",
+    "duracao": "5 anos",
+    "grau": "",
+    "universidade": 1
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 6,
+  "fields": {
+    "nome": "Engenharia ElÚtrica",
+    "descricao": "Foca na geraþÒo, transmissÒo e aplicaþÒo de energia elÚtrica.",
+    "duracao": "5 anos",
+    "grau": "",
+    "universidade": 1
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 7,
+  "fields": {
+    "nome": "Engenharia Civil",
+    "descricao": "FormaþÒo para projetar e executar obras de infraestrutura e construþÒo.",
+    "duracao": "5 anos",
+    "grau": "",
+    "universidade": 1
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 8,
+  "fields": {
+    "nome": "Design Grßfico",
+    "descricao": "Curso que une criatividade e tecnologia no desenvolvimento visual.",
+    "duracao": "3 anos",
+    "grau": "",
+    "universidade": 1
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 9,
+  "fields": {
+    "nome": "Arquitetura e Urbanismo",
+    "descricao": "Forma profissionais para projetar espaþos urbanos e edificaþ§es funcionais e sustentßveis.",
+    "duracao": "5 anos",
+    "grau": "",
+    "universidade": 1
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 10,
+  "fields": {
+    "nome": "Economia",
+    "descricao": "Estudo dos sistemas econ¶micos, finanþas p·blicas e polÝticas de desenvolvimento.",
+    "duracao": "4 anos",
+    "grau": "",
+    "universidade": 1
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 11,
+  "fields": {
+    "nome": "Marketing",
+    "descricao": "Curso voltado Ó anßlise de mercado, comportamento do consumidor e estratÚgias de vendas.",
+    "duracao": "3 anos",
+    "grau": "",
+    "universidade": 1
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 12,
+  "fields": {
+    "nome": "ComÚrcio Internacional",
+    "descricao": "FormaþÒo voltada ao comÚrcio exterior, negociaþ§es e logÝstica global.",
+    "duracao": "4 anos",
+    "grau": "",
+    "universidade": 1
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 13,
+  "fields": {
+    "nome": "Tecnologia da InformaþÒo",
+    "descricao": "Capacita profissionais para administrar sistemas e redes de informaþÒo.",
+    "duracao": "4 anos",
+    "grau": "",
+    "universidade": 1
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 14,
+  "fields": {
+    "nome": "CiÛncias Contßbeis",
+    "descricao": "Forma contadores capazes de gerenciar finanþas, auditorias e tributaþ§es.",
+    "duracao": "4 anos",
+    "grau": "",
+    "universidade": 1
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 15,
+  "fields": {
+    "nome": "Direito",
+    "descricao": "Curso que prepara profissionais para atuar no sistema jurÝdico e em advocacia.",
+    "duracao": "5 anos",
+    "grau": "",
+    "universidade": 1
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 16,
+  "fields": {
+    "nome": "Relaþ§es Internacionais",
+    "descricao": "Estuda diplomacia, polÝtica global e comÚrcio internacional.",
+    "duracao": "4 anos",
+    "grau": "",
+    "universidade": 1
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 17,
+  "fields": {
+    "nome": "Medicina",
+    "descricao": "FormaþÒo em ciÛncias mÚdicas e prßticas de sa·de e diagn¾stico clÝnico.",
+    "duracao": "6 anos",
+    "grau": "",
+    "universidade": 1
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 18,
+  "fields": {
+    "nome": "Enfermagem",
+    "descricao": "Curso voltado ao cuidado, reabilitaþÒo e promoþÒo da sa·de humana.",
+    "duracao": "4 anos",
+    "grau": "",
+    "universidade": 1
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 19,
+  "fields": {
+    "nome": "Biotecnologia",
+    "descricao": "Aborda a aplicaþÒo de tÚcnicas biol¾gicas e tecnol¾gicas em ind·strias e pesquisa.",
+    "duracao": "4 anos",
+    "grau": "",
+    "universidade": 1
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 20,
+  "fields": {
+    "nome": "Psicologia",
+    "descricao": "Estuda o comportamento humano, desenvolvimento emocional e terapia.",
+    "duracao": "5 anos",
+    "grau": "",
+    "universidade": 1
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 21,
+  "fields": {
+    "nome": "CiÛncia da ComputaþÒo",
+    "descricao": "Foca em algoritmos, programaþÒo e inteligÛncia artificial.",
+    "duracao": "4 anos",
+    "grau": "",
+    "universidade": 1
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 22,
+  "fields": {
+    "nome": "Engenharia Informßtica",
+    "descricao": "Curso voltado Ó inovaþÒo tecnol¾gica e desenvolvimento de software.",
+    "duracao": "4 anos",
+    "grau": "",
+    "universidade": 1
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 23,
+  "fields": {
+    "nome": "GestÒo Empresarial",
+    "descricao": "Curso focado em lideranþa, estratÚgia e administraþÒo moderna.",
+    "duracao": "3 anos",
+    "grau": "",
+    "universidade": 1
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 24,
+  "fields": {
+    "nome": "Design Grßfico",
+    "descricao": "Curso que une criatividade e tecnologia no desenvolvimento visual.",
+    "duracao": "3 anos",
+    "grau": "",
+    "universidade": 1
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 25,
+  "fields": {
+    "nome": "Engenharia MecÔnica",
+    "descricao": "FormaþÒo em sistemas industriais, termodinÔmica e automaþÒo.",
+    "duracao": "5 anos",
+    "grau": "",
+    "universidade": 1
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 26,
+  "fields": {
+    "nome": "Engenharia Civil",
+    "descricao": "Curso voltado a estruturas, obras e planejamento urbano.",
+    "duracao": "5 anos",
+    "grau": "",
+    "universidade": 1
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 27,
+  "fields": {
+    "nome": "Arquitetura e Urbanismo",
+    "descricao": "Curso sobre planejamento urbano, design e sustentabilidade de espaþos.",
+    "duracao": "5 anos",
+    "grau": "",
+    "universidade": 1
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 28,
+  "fields": {
+    "nome": "Economia Internacional",
+    "descricao": "Curso que analisa mercados globais, comÚrcio exterior e finanþas.",
+    "duracao": "4 anos",
+    "grau": "",
+    "universidade": 1
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 29,
+  "fields": {
+    "nome": "Engenharia de Telecomunicaþ§es",
+    "descricao": "Curso especializado em sistemas de comunicaþÒo, redes e transmissÒo de dados.",
+    "duracao": "4 anos",
+    "grau": "",
+    "universidade": 2
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 30,
+  "fields": {
+    "nome": "Engenharia de Software",
+    "descricao": "Curso voltado ao desenvolvimento de sistemas e gestÒo de projetos tecnol¾gicos.",
+    "duracao": "4 anos",
+    "grau": "",
+    "universidade": 2
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 31,
+  "fields": {
+    "nome": "CiÛncia de Dados e InteligÛncia Artificial",
+    "descricao": "Curso que integra programaþÒo, estatÝstica e aprendizado de mßquina.",
+    "duracao": "4 anos",
+    "grau": "",
+    "universidade": 2
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 32,
+  "fields": {
+    "nome": "Ciberseguranþa e Redes",
+    "descricao": "FormaþÒo especializada em seguranþa digital, criptografia e defesa de sistemas.",
+    "duracao": "4 anos",
+    "grau": "",
+    "universidade": 2
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 33,
+  "fields": {
+    "nome": "AutomaþÒo e Rob¾tica",
+    "descricao": "Curso voltado Ó integraþÒo entre mßquinas, sensores e inteligÛncia computacional.",
+    "duracao": "4 anos",
+    "grau": "",
+    "universidade": 2
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 34,
+  "fields": {
+    "nome": "Engenharia ElÚtrica",
+    "descricao": "Curso sobre eletr¶nica, energia e sistemas de controle.",
+    "duracao": "4 anos",
+    "grau": "",
+    "universidade": 2
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 35,
+  "fields": {
+    "nome": "Tecnologia da InformaþÒo e Comunicaþ§es (TIC)",
+    "descricao": "Curso interdisciplinar focado em inovaþÒo e infraestrutura de rede.",
+    "duracao": "4 anos",
+    "grau": "",
+    "universidade": 2
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 36,
+  "fields": {
+    "nome": "Medicina",
+    "descricao": "FormaþÒo em ciÛncias mÚdicas, prßticas clÝnicas e diagn¾stico avanþado.",
+    "duracao": "6 anos",
+    "grau": "",
+    "universidade": 3
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 37,
+  "fields": {
+    "nome": "Farmßcia",
+    "descricao": "Curso voltado ao estudo de medicamentos, anßlises quÝmicas e farmacologia.",
+    "duracao": "5 anos",
+    "grau": "",
+    "universidade": 3
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 38,
+  "fields": {
+    "nome": "Engenharia Ambiental",
+    "descricao": "Curso voltado Ó sustentabilidade, gestÒo de recursos naturais e tecnologias ecol¾gicas.",
+    "duracao": "4 anos",
+    "grau": "",
+    "universidade": 3
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 39,
+  "fields": {
+    "nome": "Biotecnologia",
+    "descricao": "Curso que estuda organismos vivos para o desenvolvimento de tecnologias sustentßveis.",
+    "duracao": "4 anos",
+    "grau": "",
+    "universidade": 3
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 40,
+  "fields": {
+    "nome": "Agronomia",
+    "descricao": "FormaþÒo em produþÒo agrÝcola, solo, irrigaþÒo e melhoramento genÚtico.",
+    "duracao": "5 anos",
+    "grau": "",
+    "universidade": 3
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 41,
+  "fields": {
+    "nome": "CiÛncias do Alimento",
+    "descricao": "Curso focado na produþÒo, conservaþÒo e controle de qualidade alimentar.",
+    "duracao": "4 anos",
+    "grau": "",
+    "universidade": 3
+  }
+},
+{
+  "model": "cursos.curso",
+  "pk": 42,
+  "fields": {
+    "nome": "Engenharia Florestal",
+    "descricao": "Curso dedicado Ó gestÒo de ecossistemas, reflorestamento e conservaþÒo ambiental.",
+    "duracao": "5 anos",
+    "grau": "",
+    "universidade": 3
+  }
+}
+]

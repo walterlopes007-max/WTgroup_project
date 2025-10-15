@@ -41,3 +41,9 @@ def sobre(request):
 
 def home(request):
     return render(request, 'home.html')
+from django.core.management import call_command
+from django.http import HttpResponse
+
+def carregar_cursos(request):
+    call_command('loaddata', 'cursos_backup_fixed.json')
+    return HttpResponse("✅ Cursos carregados com sucesso no Render!")
