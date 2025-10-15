@@ -1,7 +1,12 @@
 from django.shortcuts import render
 from django.core.mail import send_mail
 from django.conf import settings
+from .models import Curso
 from .forms import ContatoForm
+
+def lista_cursos(request):
+    cursos = Curso.objects.all()
+    return render(request, 'cursos/lista.html', {'cursos': cursos})
 
 def contato(request):
     sucesso = False  # variável de controle
