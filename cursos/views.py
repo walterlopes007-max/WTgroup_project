@@ -75,7 +75,7 @@ def lista_cursos(request):
             "universidade": "NUPT",
             "nome": "Business Administration",
             "descricao": "Administração de empresas e gestão de negócios.",
-            "imagem": "images/business_admin_nupt.jpg",
+            "imagem": "images/business_admin.jpg",
             "duracao": "4 anos",
         },
 

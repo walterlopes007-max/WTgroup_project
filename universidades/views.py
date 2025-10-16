@@ -16,7 +16,7 @@ def lista(request):
             "pais": "China",
             "descricao": "Reconhecida internacionalmente na área de telecomunicações e tecnologias da informação.",
             "site": "https://www.njupt.edu.cn/",
-            "imagem": "images/nupt.jpg",
+            "imagem": "images/NUPT.jpg",
         },
         {
             "nome": "Universidade de Ciências e Tecnologia Agrícola de Jilin (吉林农业科技学院)",
