@@ -1,12 +1,19 @@
 {% extends 'base.html' %}
-{% block content %}
-<div class="container py-5">
-  <h1 class="fw-bold text-primary">{{ curso.nome }}</h1>
-  <p class="text-muted">{{ curso.descricao }}</p>
-  <p><strong>Duração:</strong> {{ curso.duracao }}</p>
-  <p><strong>Universidade:</strong> {{ curso.universidade.nome }}</p>
+{% load static %}
 
-  <a href="{% url 'cursos' %}" class="btn btn-outline-primary mt-3">⬅ Voltar à lista</a>
-</div>
+{% block content %}
+<section class="section py-5">
+  <div class="container text-center">
+    <h2 class="fw-bold text-white mb-4">{{ curso.nome }}</h2>
+    {% if curso.imagem %}
+      <img src="{{ curso.imagem.url }}" class="img-fluid rounded-4 shadow mb-4" style="max-width:600px">
+    {% endif %}
+    <p class="text-light fs-5">{{ curso.descricao }}</p>
+    <p class="text-secondary">Duração: {{ curso.duracao }}</p>
+    <a href="{% url 'lista_cursos' %}" class="btn btn-outline-light mt-4">Voltar aos Cursos</a>
+  </div>
+</section>
 {% endblock %}
+
+
 

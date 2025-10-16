@@ -1,49 +1,105 @@
 {% extends 'base.html' %}
-
-{% block title %}Universidades - WTgroup{% endblock %}
+{% load static %}
 
 {% block content %}
-<!-- HERO + BACKGROUND -->
-<section class="text-light text-center py-5"
-         style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; min-height: 300px;">
-  <div class="container py-5">
-    <h1 class="fw-bold text-info mb-3 animate__animated animate__fadeInDown">
-      Universidades Parceiras 🌍
-    </h1>
-    <p class="lead animate__animated animate__fadeInUp">
-      Explore nossas universidades parceiras — instituições de excelência reconhecidas mundialmente.
-    </p>
-  </div>
-</section>
+<section class="section py-5" style="background-color: #0b132b;">
+  <div class="container text-center">
+    <h2 class="fw-bold text-light mb-5 fade-in">🏫 Nossas Universidades</h2>
 
-<!-- UNIVERSIDADES LIST -->
-<section class="py-5" 
-         style="background: linear-gradient(rgba(10,10,20,0.85), rgba(10,10,20,0.9)), url('https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=1600&q=80') center/cover fixed no-repeat;">
-  <div class="container">
-    <div class="row g-4">
+    <div class="row justify-content-center g-4">
       {% for universidade in universidades %}
-      <div class="col-md-4">
-        <div class="card border-0 shadow-lg h-100 bg-dark text-light rounded-4" style="background-color: rgba(15, 20, 30, 0.9);">
-          <img src="https://source.unsplash.com/600x400/?university,{{ universidade.nome|urlencode }}" 
-               class="card-img-top rounded-top" alt="{{ universidade.nome }}">
-          <div class="card-body">
-            <h5 class="fw-bold text-info">{{ universidade.nome }}</h5>
-            <p class="small text-muted">{{ universidade.pais }}</p>
-            <p>{{ universidade.descricao|truncatechars:120 }}</p>
-            <a href="{{ universidade.site }}" target="_blank" class="btn btn-outline-info btn-sm mt-2">
-              🌐 Visitar Site
-            </a>
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="curso-card text-center">
+          <div class="img-container">
+            {% if universidade.imagem %}
+              <img src="{% static universidade.imagem %}" alt="{{ universidade.nome }}">
+            {% else %}
+              <img src="{% static 'images/universidade_placeholder.jpg' %}" alt="{{ universidade.nome }}">
+            {% endif %}
+          </div>
+
+          <div class="curso-info">
+            <h5 class="fw-bold text-white mt-3">{{ universidade.nome }}</h5>
+            <p class="text-light small mb-3">{{ universidade.descricao|truncatechars:100 }}</p>
+            <a href="{{ universidade.site }}" target="_blank" class="btn-ver">Visitar Site</a>
           </div>
         </div>
       </div>
       {% empty %}
-      <p class="text-center text-muted">Nenhuma universidade cadastrada.</p>
+      <p class="text-white">Nenhuma universidade cadastrada no momento.</p>
       {% endfor %}
     </div>
   </div>
 </section>
 
-<footer class="bg-dark text-center text-light py-3 mt-5">
-  <p>© 2025 WTgroup | Desenvolvido por Walter Lopes</p>
-</footer>
+<style>
+body {
+  background-color: #0b132b;
+}
+
+.curso-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 25px rgba(0,0,0,0.3);
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.curso-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 8px 30px rgba(0,255,255,0.2);
+}
+
+.img-container {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-bottom: 2px solid #00e6c3;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.curso-card:hover .img-container img {
+  transform: scale(1.1);
+}
+
+.curso-info {
+  padding: 20px;
+}
+
+.btn-ver {
+  display: inline-block;
+  background: linear-gradient(90deg, #00e6c3, #007bff);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-ver:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
 {% endblock %}
+
+
+

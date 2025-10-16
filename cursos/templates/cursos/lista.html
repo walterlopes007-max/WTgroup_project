@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -12,16 +13,25 @@
         h1 {
             color: #333;
         }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        li {
+        .curso-card {
             background: #fff;
-            margin: 10px 0;
-            padding: 15px;
+            margin: 15px 0;
+            padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .curso-card img {
+            width: 180px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 2px solid #007bff;
+        }
+        .curso-info {
+            flex: 1;
         }
         small {
             color: gray;
@@ -29,18 +39,21 @@
     </style>
 </head>
 <body>
-    <h1>Lista de Cursos</h1>
-    <ul>
+    <h1>📘 Lista de Cursos</h1>
+
+    {% if cursos %}
         {% for curso in cursos %}
-            <li>
-                <strong>{{ curso.nome }}</strong> <br>
-                <small>{{ curso.descricao }}</small> <br>
-                Duração: {{ curso.duracao }} <br>
-                Universidade: {{ curso.universidade.nome }}
-            </li>
-        {% empty %}
-            <li>Nenhum curso cadastrado.</li>
+            <div class="curso-card">
+                <img src="{% static curso.imagem %}" alt="{{ curso.nome }}">
+                <div class="curso-info">
+                    <h3>{{ curso.nome }}</h3>
+                    <p>{{ curso.descricao }}</p>
+                    <p><strong>Duração:</strong> {{ curso.duracao }}</p>
+                </div>
+            </div>
         {% endfor %}
-    </ul>
+    {% else %}
+        <p>Nenhum curso cadastrado.</p>
+    {% endif %}
 </body>
 </html>

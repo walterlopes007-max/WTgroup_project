@@ -1,32 +1,102 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
-<section class="section">
-  <div class="container">
-    <h1 class="text-center fw-bold mb-5">📚 Lista de Cursos Disponíveis</h1>
+<section class="section py-5" style="background-color: #0b132b;">
+  <div class="container text-center">
+    <h2 class="fw-bold text-light mb-5 fade-in">🎓 Nossos Cursos</h2>
 
-    {% regroup cursos by universidade as universidades_list %}
+    <div class="row justify-content-center g-4">
+      {% for curso in cursos %}
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="curso-card text-center">
+          <div class="img-container">
+            {% if curso.imagem %}
+            <img src="{% static curso.imagem %}" alt="{{ curso.nome }}">
+            {% else %}
+            <img src="{% static 'images/placeholder.jpg' %}" alt="{{ curso.nome }}">
+            {% endif %}
+          </div>
 
-    {% for grupo in universidades_list %}
-      <div class="card mb-5 shadow">
-        <div class="card-header bg-primary text-white">
-          <h3 class="mb-0">{{ grupo.grouper.nome }}</h3>
-        </div>
-        <div class="card-body">
-          <ul class="list-group list-group-flush">
-            {% for curso in grupo.list %}
-              <li class="list-group-item">
-                <h5 class="fw-bold text-dark">{{ curso.nome }}</h5>
-                <p class="mb-1">{{ curso.descricao }}</p>
-                <span class="badge bg-secondary">Duração: {{ curso.duracao }}</span>
-              </li>
-            {% endfor %}
-          </ul>
+          <div class="curso-info">
+            <h5 class="fw-bold text-white mt-3">{{ curso.nome }}</h5>
+            <p class="text-light small mb-3">{{ curso.descricao|truncatechars:100 }}</p>
+          <a href="/cursos/" class="btn-ver">Ver Detalhes</a>
+          </div>
         </div>
       </div>
-    {% empty %}
-      <p class="text-center">Nenhum curso encontrado no momento.</p>
-    {% endfor %}
+      {% empty %}
+      <p class="text-white">Nenhum curso disponível no momento.</p>
+      {% endfor %}
+    </div>
   </div>
 </section>
+
+<style>
+body {
+  background-color: #0b132b;
+}
+
+.curso-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 25px rgba(0,0,0,0.3);
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.curso-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 8px 30px rgba(0,255,255,0.2);
+}
+
+.img-container {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-bottom: 2px solid #00e6c3;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.curso-card:hover .img-container img {
+  transform: scale(1.1);
+}
+
+.curso-info {
+  padding: 20px;
+}
+
+.btn-ver {
+  display: inline-block;
+  background: linear-gradient(90deg, #00e6c3, #007bff);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-ver:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
 {% endblock %}

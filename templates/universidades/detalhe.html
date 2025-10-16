@@ -1,12 +1,11 @@
 {% extends 'base.html' %}
-{% block title %}{{ universidade.nome }}{% endblock %}
-
 {% block content %}
-<div class="container mt-5">
-  <h1 class="text-primary">{{ universidade.nome }}</h1>
-  <p><strong>País:</strong> {{ universidade.pais }}</p>
-  <p>{{ universidade.descricao }}</p>
-  <a href="{{ universidade.site }}" target="_blank" class="btn btn-success">Visitar Site</a>
-  <a href="{% url 'lista_universidades' %}" class="btn btn-secondary mt-3">Voltar</a>
-</div>
+<section class="section py-5 text-center" style="background-color: #0b132b;">
+  <div class="container">
+    <h2 class="fw-bold text-light">Detalhes da Universidade</h2>
+    <p class="text-light">Página de detalhes em construção para ID: {{ universidade_id }}</p>
+    <a href="{% url 'lista_universidades' %}" class="btn btn-primary mt-3">Voltar</a>
+  </div>
+</section>
 {% endblock %}
+
