@@ -31,7 +31,7 @@ def lista_cursos(request):
             "universidade": "JUST",
             "nome": "Business Administration",
             "descricao": "Administração de empresas e gestão.",
-            "imagem": "images/business_admin.jpg",
+            "imagem": "images/Business_Administration.jpg",
             "duracao": "4 anos",
         },
         {
